@@ -15,16 +15,6 @@ string[] CreateFillArr(int d)
     return arr;
 }
 
-void vivod(string msg, string[] arr)
-{
-    Console.Write(msg);
-    foreach(var i in arr)
-    {
-        Console.Write(i+" ");
-    }
-    Console.WriteLine();
-}
-
 int CountItem(string[] arr)
 {
     int c = 0;
@@ -50,9 +40,18 @@ string[] Filter(string[] a)
     return b;
 }
 
-int n = WriteRead("Введите длину первоначального массива: ");
+void Vivod(string msg, string[] arr)
+{
+    Console.Write(msg);
+    foreach(var i in arr)
+    {
+        Console.Write(i+" ");
+    }
+    Console.WriteLine();
+}
+
+int n = WriteRead("Введите размер первоначального массива: ");
 string[] arrayIn = CreateFillArr(n);
 string[] arrayOut = Filter(arrayIn);
-Filter(arrayIn);
-vivod("Исходный массив: ", arrayIn);
-vivod("Сформированный массив: ", arrayOut);
+Vivod("Исходный массив: ", arrayIn);
+Vivod("Сформированный массив: ", arrayOut);
