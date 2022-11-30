@@ -22,6 +22,7 @@ void vivod(string msg, string[] arr)
     {
         Console.Write(i+" ");
     }
+    Console.WriteLine();
 }
 
 int CountItem(string[] arr)
