@@ -23,6 +23,32 @@ void vivod(string[] arr)
     }
 }
 
+int CountItem(string[] arr)
+{
+    int c = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3) c++;
+    }
+    return c;
+}
+
+void Filter(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        j=0;
+        if (arr[i].Length <= 3) 
+        {
+            arrayOut[j]=arr[i];
+            j++;
+        }
+    }
+}
+
 int n = WriteRead("Введите длину первоначального массива: ");
 string[] arrayIn = CreateFillArr(n);
+string[] arrayOut = new string[CountItem(arrayIn)];
+Filter(arrayIn);
 vivod(arrayIn);
+vivod(arrayOut);
