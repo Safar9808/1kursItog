@@ -23,8 +23,6 @@ void vivod(string[] arr)
     }
 }
 
-
-int n = WriteRead("Введите длину первоначального массива: ")
-
-string[] arrayIn =  CreateFillArr[n];
+int n = WriteRead("Введите длину первоначального массива: ");
+string[] arrayIn = CreateFillArr(n);
 vivod(arrayIn);
